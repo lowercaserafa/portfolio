@@ -9,20 +9,11 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+export default [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      // Allow @ts-ignore and @ts-expect-error without errors
       "@typescript-eslint/ban-ts-comment": "off",
-
-      // Allow 'any' type temporarily
-      "@typescript-eslint/no-explicit-any": "off",
-
-      // Ignore unused expressions (like single-line animations, optional chaining)
-      "@typescript-eslint/no-unused-expressions": "off",
     },
   },
 ];
-
-export default eslintConfig;
