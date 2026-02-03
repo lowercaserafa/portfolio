@@ -3,8 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BlurGradientBg } from "@/jsm/BlurGradientBg.module.js";
 import { motion } from "framer-motion";
-import * as anime from "animejs";
-
 
 export default function Home() {
   const cursorRef = useRef<HTMLDivElement>(null);
